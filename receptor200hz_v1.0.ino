@@ -1,6 +1,6 @@
 
 int val = 0;
-int cnt = -1;
+
 void setup(){
 Serial.begin(9600);
 
@@ -25,9 +25,6 @@ sei();//allow interrupts
 
 ISR(TIMER1_COMPA_vect){//timer1 interrupt 100Hz toggles
     val=analogRead(0);
-    Serial.print(cnt);
-    Serial.print(",");
-    cnt = cnt+1;
     Serial.println(val);
 
 }
