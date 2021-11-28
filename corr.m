@@ -1,5 +1,4 @@
+%MATLAB script that plots the autocorrelation of the output vector to check if the  Characteristic polynomial chosen for the complex signal is generating a maximum-length sequence (primitive polynomial).
 m = readmatrix('..\output.csv'); %Monto minha matriz a partir dos dados fornecidos pelo script python
-[M N] = size(m);
-k1 = 1:M;
-r = xcorr(2*k1-1)
+r = xcorr(2*m-1);
 plot(r)
